@@ -7,15 +7,18 @@ interface HeaderProps {
 export const Header = ({ onDemandeClick }: HeaderProps) => {
     const [menuOuvert, setMenuOuvert] = useState(false);
 
+    const chevronClass = menuOuvert
+        ? 'w-3 h-3 transition-transform duration-200 rotate-180'
+        : 'w-3 h-3 transition-transform duration-200 rotate-0';
+
     return (
         <>
             <header className="sticky top-0 z-40 w-full bg-ls-black/95 backdrop-blur-xl border-b border-white/[0.06] px-5 py-3.5 flex justify-between items-center">
 
-                {/* Logo */}
                 <button
                     onClick={() => setMenuOuvert(false)}
                     className="group flex items-center gap-2.5"
-                    aria-label="LS La Solution — Accueil"
+                    aria-label="LS La Solution"
                 >
                     <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-ls-gold to-ls-gold-hover flex items-center justify-center shadow-lg shadow-ls-gold/20">
                         <span className="text-ls-black font-black text-xs tracking-widest">LS</span>
@@ -25,21 +28,17 @@ export const Header = ({ onDemandeClick }: HeaderProps) => {
                     </span>
                 </button>
 
-                {/* Nav droite */}
                 <nav className="flex items-center gap-1">
-
-                    {/* Menu */}
                     <button
                         onClick={() => setMenuOuvert(v => !v)}
-                        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-semibold uppercase tracking-wider transition-all duration-200 ${
-                            menuOuvert
-                                ? 'bg-ls-gold/10 text-ls-gold'
-                                : 'text-gray-400 hover:text-ls-white hover:bg-white/5'
-                        }`}
+                        className={menuOuvert
+                            ? 'flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-semibold uppercase tracking-wider transition-all duration-200 bg-ls-gold/10 text-ls-gold'
+                            : 'flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-semibold uppercase tracking-wider transition-all duration-200 text-gray-400 hover:text-ls-white hover:bg-white/5'
+                        }
                     >
                         Menu
                         <svg
-                            className={`w-3 h-3 transition-transform duration-200 ${menuOuvert ? 'rotate-180' : 'rotate-0'}`}
+                            className={chevronClass}
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
@@ -49,7 +48,6 @@ export const Header = ({ onDemandeClick }: HeaderProps) => {
                         </svg>
                     </button>
 
-                    {/* Demande Express — smooth scroll */}
                     <button
                         onClick={() => {
                             setMenuOuvert(false);
@@ -59,11 +57,9 @@ export const Header = ({ onDemandeClick }: HeaderProps) => {
                     >
                         Demande Express
                     </button>
-
                 </nav>
             </header>
 
-            {/* Panneau Menu déroulant */}
             {menuOuvert && (
                 <div
                     className="fixed inset-0 z-30 pt-[57px]"
@@ -75,7 +71,6 @@ export const Header = ({ onDemandeClick }: HeaderProps) => {
                     >
                         <div className="bg-[#0f0f0f] border border-white/[0.08] rounded-2xl overflow-hidden shadow-2xl shadow-black/60 animate-slide-down">
 
-                            {/* Comment ça marche */}
                             <div className="p-5 border-b border-white/[0.06]">
                                 <p className="text-[10px] text-ls-gold uppercase tracking-[0.15em] font-bold mb-4">
                                     ✦ Comment ça marche
@@ -97,7 +92,6 @@ export const Header = ({ onDemandeClick }: HeaderProps) => {
                                 </div>
                             </div>
 
-                            {/* Qui sommes-nous / Contact */}
                             <div className="p-5">
                                 <p className="text-[10px] text-ls-gold uppercase tracking-[0.15em] font-bold mb-3">
                                     ✦ Qui sommes-nous
@@ -108,7 +102,6 @@ export const Header = ({ onDemandeClick }: HeaderProps) => {
                                     Nous ne vendons pas de stock : nous trouvons exactement ce que vous cherchez et nous vous le livrons.
                                 </p>
 
-                                {/* Contact WhatsApp */}
                                 
                                     href="https://wa.me/221776729740"
                                     target="_blank"
