@@ -21,7 +21,7 @@ body {
 }
 
 ::selection {
-  background: #10b981;
+  background: #D4AF37;
   color: #0a0a0a;
 }
 
@@ -41,30 +41,27 @@ body {
 .animate-fade-in    { animation: fadeIn    0.4s cubic-bezier(0.16, 1, 0.3, 1) both; }
 .animate-slide-down { animation: slideDown 0.3s cubic-bezier(0.16, 1, 0.3, 1) both; }
 
-/* Ligne décorative verte */
-.green-divider {
+.gold-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, #10b981 40%, #10b981 60%, transparent);
+  background: linear-gradient(90deg, transparent, #D4AF37 40%, #D4AF37 60%, transparent);
   opacity: 0.3;
 }
 
-/* Badge */
-.badge-green {
+.badge-gold {
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
   padding: 0.2rem 0.65rem;
-  border: 1px solid rgba(16,185,129,0.4);
+  border: 1px solid rgba(212,175,55,0.4);
   border-radius: 9999px;
   font-size: 0.625rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #10b981;
+  color: #D4AF37;
   font-weight: 600;
 }
 
-/* Input */
-.input-green {
+.input-gold {
   background-color: #0d0d0d;
   border: 1px solid rgba(255,255,255,0.08);
   color: #fafafa;
@@ -78,9 +75,9 @@ body {
   appearance: none;
 }
 
-.input-green:focus {
-  border-color: #10b981;
-  box-shadow: 0 0 0 3px rgba(16,185,129,0.1);
+.input-gold:focus {
+  border-color: #D4AF37;
+  box-shadow: 0 0 0 3px rgba(212,175,55,0.1);
 }
 
-.input-green::placeholder { color: rgba(255,255,255,0.2); }
+.input-gold::placeholder { color: rgba(255,255,255,0.2); }
