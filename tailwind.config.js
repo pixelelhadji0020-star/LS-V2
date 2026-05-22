@@ -7,12 +7,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        'ls-black':       '#0a0a0a',
-        'ls-white':       '#fafafa',
-        'ls-green':       '#10b981',
-        'ls-green-light': '#34d399',
-        'ls-green-dark':  '#059669',
-        'ls-green-dim':   '#10b98120',
+        'ls-black':      '#0a0a0a',
+        'ls-white':      '#fafafa',
+        'ls-gold':       '#D4AF37',
+        'ls-gold-light': '#E8C84A',
+        'ls-gold-dark':  '#b5952f',
+        'ls-gold-dim':   '#D4AF3720',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
