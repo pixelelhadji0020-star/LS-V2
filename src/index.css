@@ -2,30 +2,85 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Styles globaux pour coller au cahier des charges Mobile-First Premium */
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
 body {
   background-color: #0a0a0a;
   color: #fafafa;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior: none;
 }
 
-/* Suppression de la barre de défilement horizontale pour l'expérience PWA */
-.scrollbar-none::-webkit-scrollbar {
-  display: none;
-}
-.scrollbar-none {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+::selection {
+  background: #10b981;
+  color: #0a0a0a;
 }
 
-/* Animations fluides pour le catalogue et le formulaire */
+.scrollbar-none::-webkit-scrollbar { display: none; }
+.scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-.animate-fade-in {
-  animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
+
+.animate-fade-in    { animation: fadeIn    0.4s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-slide-down { animation: slideDown 0.3s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+/* Ligne décorative verte */
+.green-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #10b981 40%, #10b981 60%, transparent);
+  opacity: 0.3;
+}
+
+/* Badge */
+.badge-green {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.2rem 0.65rem;
+  border: 1px solid rgba(16,185,129,0.4);
+  border-radius: 9999px;
+  font-size: 0.625rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #10b981;
+  font-weight: 600;
+}
+
+/* Input */
+.input-green {
+  background-color: #0d0d0d;
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #fafafa;
+  border-radius: 0.75rem;
+  padding: 0.875rem 1rem;
+  font-size: 0.875rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.input-green:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16,185,129,0.1);
+}
+
+.input-green::placeholder { color: rgba(255,255,255,0.2); }
