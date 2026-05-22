@@ -22,15 +22,17 @@ export const Header = ({ onRechercheValidee }: HeaderProps) => {
     return (
         <header className="sticky top-0 z-40 w-full bg-ls-black/95 backdrop-blur-xl border-b border-white/[0.06] px-4 py-3">
             <div className="max-w-md mx-auto flex items-center gap-3">
-                <div className="flex items-center gap-2 flex-shrink-0">
-                    <div className="w-8 h-8 rounded-lg bg-ls-green flex items-center justify-center shadow-lg shadow-ls-green/20">
+
+                <div className="flex-shrink-0">
+                    <div className="w-8 h-8 rounded-lg bg-ls-gold flex items-center justify-center shadow-lg shadow-ls-gold/20">
                         <span className="text-ls-black font-black text-xs tracking-widest">LS</span>
                     </div>
                 </div>
-                <div className="flex-1 flex items-center bg-[#111] border border-white/[0.08] rounded-xl px-3 gap-2 focus-within:border-ls-green/50 transition-colors">
+
+                <div className="flex-1 flex items-center bg-[#111] border border-white/[0.08] rounded-xl px-3 gap-2 focus-within:border-ls-gold/50 transition-colors">
                     <button
                         onClick={valider}
-                        className="flex-shrink-0 text-gray-500 hover:text-ls-green transition-colors"
+                        className="flex-shrink-0 text-gray-500 hover:text-ls-gold transition-colors"
                     >
                         <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                             <circle cx="11" cy="11" r="8" />
@@ -47,6 +49,7 @@ export const Header = ({ onRechercheValidee }: HeaderProps) => {
                         className="flex-1 bg-transparent py-2.5 text-[13px] text-white placeholder:text-gray-600 outline-none"
                     />
                 </div>
+
             </div>
         </header>
     );
