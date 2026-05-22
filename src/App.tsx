@@ -27,13 +27,14 @@ export default function App() {
         prefill: '',
     });
 
-    const ouvrirModal = (categorie: Categorie, prefill = '') => {
+    const ouvrirModal = (categorie: Categorie, prefill = '') =>
         setModal({ ouverte: true, categorie, prefill });
-    };
 
-    const fermerModal = () => setModal((prev) => ({ ...prev, ouverte: false }));
+    const fermerModal = () =>
+        setModal((prev) => ({ ...prev, ouverte: false }));
 
-    const onRechercheValidee = (texte: string) => ouvrirModal('specifique', texte);
+    const onRechercheValidee = (texte: string) =>
+        ouvrirModal('specifique', texte);
 
     return (
         <div className="min-h-screen bg-ls-black text-ls-white flex flex-col font-sans">
@@ -45,7 +46,7 @@ export default function App() {
                 <div className="space-y-2 animate-fade-in">
                     <h1 className="text-[1.75rem] font-black tracking-tight leading-[1.2]">
                         LS, une plateforme qui<br />
-                        <span className="text-ls-green">simplifie vos achats</span><br />
+                        <span className="text-ls-gold">simplifie vos achats</span><br />
                         et acquisitions.
                     </h1>
                 </div>
@@ -55,13 +56,13 @@ export default function App() {
                         <button
                             key={cat.id}
                             onClick={() => ouvrirModal(cat.id)}
-                            className="w-full flex items-center justify-between bg-[#0f0f0f] border border-white/[0.07] hover:border-ls-green/40 rounded-2xl px-4 py-4 transition-all duration-200 group active:scale-[0.99] animate-fade-in"
+                            className="w-full flex items-center justify-between bg-[#0f0f0f] border border-white/[0.07] hover:border-ls-gold/40 rounded-2xl px-4 py-4 transition-all duration-200 group active:scale-[0.99] animate-fade-in"
                             style={{ animationDelay: idx * 60 + 'ms' }}
                         >
                             <div className="flex items-center gap-4">
-                                <div className="w-10 h-10 rounded-xl bg-ls-green/10 border border-ls-green/20 flex items-center justify-center flex-shrink-0 group-hover:bg-ls-green/20 transition-colors">
+                                <div className="w-10 h-10 rounded-xl bg-ls-gold/10 border border-ls-gold/20 flex items-center justify-center flex-shrink-0 group-hover:bg-ls-gold/20 transition-colors">
                                     <span className={cat.id === 'specifique'
-                                        ? 'text-ls-green font-black text-base'
+                                        ? 'text-ls-gold font-black text-base'
                                         : 'text-xl'
                                     }>
                                         {cat.icone}
@@ -73,7 +74,7 @@ export default function App() {
                                 </div>
                             </div>
                             <svg
-                                className="w-4 h-4 text-gray-600 group-hover:text-ls-green transition-colors flex-shrink-0"
+                                className="w-4 h-4 text-gray-600 group-hover:text-ls-gold transition-colors flex-shrink-0"
                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"
                             >
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 18l6-6-6-6" />
@@ -89,7 +90,7 @@ export default function App() {
                         Véhicule neuf ou occasion, téléphone et accessoires, vêtements, électroménagers,
                         matériels informatiques... Formulez une demande et la mise à disposition est effectuée.
                     </p>
-                    <p className="text-[13px] text-gray-500 leading-relaxed italic border-l-2 border-ls-green/40 pl-4">
+                    <p className="text-[13px] text-gray-500 leading-relaxed italic border-l-2 border-ls-gold/40 pl-4">
                         "Déléguez votre précieux temps à notre équipe professionnelle sur toutes vos commandes.
                         Avec La_Solution (LS), vos commandes restent prioritaires."
                     </p>
