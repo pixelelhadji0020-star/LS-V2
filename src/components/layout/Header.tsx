@@ -5,7 +5,7 @@ interface HeaderProps {
 }
 
 const ETAPES_MENU = [
-    { n: '01', t: 'Vous formulez votre demande via le grand carré.' },
+    { n: '01', t: 'Formulez votre demande via le grand carré central.' },
     { n: '02', t: 'Vous êtes redirigé directement sur WhatsApp.' },
     { n: '03', t: 'Notre équipe vous appelle pour caler les détails.' },
     { n: '04', t: 'Nous trouvons et livrons votre commande en 24h.' },
@@ -20,7 +20,7 @@ export const Header = ({ onDemandeClick }: HeaderProps) => {
     const basculer = () => setMenuOuvert((v) => !v);
 
     const navBoutonClass = menuOuvert
-        ? 'flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-semibold uppercase tracking-wider transition-all duration-200 bg-ls-gold/10 text-ls-gold'
+        ? 'flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-semibold uppercase tracking-wider transition-all duration-200 bg-ls-green/10 text-ls-green'
         : 'flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-semibold uppercase tracking-wider transition-all duration-200 text-gray-400 hover:text-ls-white hover:bg-white/5';
 
     const chevronClass = menuOuvert
@@ -32,10 +32,10 @@ export const Header = ({ onDemandeClick }: HeaderProps) => {
             <header className="sticky top-0 z-40 w-full bg-ls-black/95 backdrop-blur-xl border-b border-white/[0.06] px-5 py-3.5 flex justify-between items-center">
 
                 <button onClick={fermer} className="group flex items-center gap-2.5" aria-label="LS La Solution">
-                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-ls-gold to-ls-gold-hover flex items-center justify-center shadow-lg shadow-ls-gold/20">
+                    <div className="w-8 h-8 rounded-lg bg-ls-green flex items-center justify-center shadow-lg shadow-ls-green/20">
                         <span className="text-ls-black font-black text-xs tracking-widest">LS</span>
                     </div>
-                    <span className="text-ls-white font-bold text-sm tracking-wider group-hover:text-ls-gold transition-colors duration-200">
+                    <span className="text-ls-white font-bold text-sm tracking-wider group-hover:text-ls-green transition-colors duration-200">
                         La Solution
                     </span>
                 </button>
@@ -51,7 +51,7 @@ export const Header = ({ onDemandeClick }: HeaderProps) => {
 
                     <button
                         onClick={() => { fermer(); onDemandeClick(); }}
-                        className="px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-wider bg-ls-gold text-ls-black hover:bg-ls-gold-light transition-all duration-200 active:scale-95"
+                        className="px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-wider bg-ls-green text-ls-black hover:bg-ls-green-light transition-all duration-200 active:scale-95"
                     >
                         Demande Express
                     </button>
@@ -65,13 +65,13 @@ export const Header = ({ onDemandeClick }: HeaderProps) => {
                         <div className="bg-[#0f0f0f] border border-white/[0.08] rounded-2xl overflow-hidden shadow-2xl shadow-black/60 animate-slide-down">
 
                             <div className="p-5 border-b border-white/[0.06]">
-                                <p className="text-[10px] text-ls-gold uppercase tracking-[0.15em] font-bold mb-4">
+                                <p className="text-[10px] text-ls-green uppercase tracking-[0.15em] font-bold mb-4">
                                     ✦ Comment ça marche
                                 </p>
                                 <div className="space-y-3">
                                     {ETAPES_MENU.map(({ n, t }) => (
                                         <div key={n} className="flex items-start gap-3">
-                                            <span className="w-5 h-5 rounded-full border border-ls-gold/40 flex items-center justify-center text-[9px] font-black text-ls-gold flex-shrink-0 mt-0.5">
+                                            <span className="w-5 h-5 rounded-full border border-ls-green/40 flex items-center justify-center text-[9px] font-black text-ls-green flex-shrink-0 mt-0.5">
                                                 {n}
                                             </span>
                                             <p className="text-[12px] text-gray-300 leading-snug">{t}</p>
@@ -81,16 +81,9 @@ export const Header = ({ onDemandeClick }: HeaderProps) => {
                             </div>
 
                             <div className="p-5">
-                                <p className="text-[10px] text-ls-gold uppercase tracking-[0.15em] font-bold mb-3">
-                                    ✦ Qui sommes-nous
+                                <p className="text-[10px] text-ls-green uppercase tracking-[0.15em] font-bold mb-3">
+                                    ✦ Nous contacter
                                 </p>
-                                <p className="text-[12px] text-gray-400 leading-relaxed mb-4">
-                                    LS — La Solution est un service de sourcing et de conciergerie premium
-                                    basé à <strong className="text-gray-200">Dakar, Sénégal</strong>.
-                                    Nous ne vendons pas de stock : nous trouvons exactement ce que vous cherchez
-                                    et nous vous le livrons.
-                                </p>
-
                                 
                                     href={WA_HREF}
                                     target="_blank"
