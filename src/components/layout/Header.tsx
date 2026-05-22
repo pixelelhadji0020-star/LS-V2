@@ -55,7 +55,8 @@ export const Header = ({ onDemandeClick }: HeaderProps) => {
                         Demande Express
                     </button>
                 </nav>
-            </header>{menuOuvert && (
+            </header>
+            {menuOuvert && (
                 <div className="fixed inset-0 z-30 pt-[57px]" onClick={fermer}>
                     <div className="mx-auto max-w-md px-4 pt-2" onClick={(e) => e.stopPropagation()}>
                         <div className="bg-[#0f0f0f] border border-white/[0.08] rounded-2xl overflow-hidden shadow-2xl shadow-black/60 animate-slide-down">
