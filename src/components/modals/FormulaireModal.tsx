@@ -60,9 +60,9 @@ const soumettre = (
     window.open('https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg), '_blank');
 };
 
-const InputCls = 'w-full bg-[#0d0d0d] border border-white/[0.08] focus:border-ls-green/60 text-white rounded-xl px-3 py-2.5 text-[13px] outline-none placeholder:text-gray-600 transition-colors';
+const InputCls = 'w-full bg-[#0d0d0d] border border-white/[0.08] focus:border-ls-gold/60 text-white rounded-xl px-3 py-2.5 text-[13px] outline-none placeholder:text-gray-600 transition-colors';
 const LabelCls = 'block text-[10px] font-bold uppercase tracking-[0.1em] text-gray-500 mb-1';
-const BtnCls   = 'w-full flex items-center justify-center gap-2 bg-ls-green hover:bg-ls-green-light text-ls-black font-black py-3.5 rounded-xl text-[12px] uppercase tracking-widest transition-all duration-200 active:scale-[0.98] mt-2';
+const BtnCls   = 'w-full flex items-center justify-center gap-2 bg-ls-gold hover:bg-ls-gold-light text-ls-black font-black py-3.5 rounded-xl text-[12px] uppercase tracking-widest transition-all duration-200 active:scale-[0.98] mt-2';
 
 const BlocClient = ({
     client,
@@ -72,7 +72,7 @@ const BlocClient = ({
     onChange: (k: keyof ChampClient, v: string) => void;
 }) => (
     <div className="space-y-3 pt-4 border-t border-white/[0.06]">
-        <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-ls-green">
+        <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-ls-gold">
             ✦ Vos coordonnées
         </p>
         <div>
@@ -124,11 +124,7 @@ const FormulaireVehicules = ({
         <div className="space-y-3">
             <div>
                 <label className={LabelCls}>Type d'offre *</label>
-                <select
-                    value={offre}
-                    onChange={(e) => setOffre(e.target.value)}
-                    className={InputCls}
-                >
+                <select value={offre} onChange={(e) => setOffre(e.target.value)} className={InputCls}>
                     <option value="">Sélectionner...</option>
                     <option>Achat</option>
                     <option>Location</option>
@@ -136,31 +132,15 @@ const FormulaireVehicules = ({
             </div>
             <div>
                 <label className={LabelCls}>Marque du véhicule *</label>
-                <input
-                    type="text"
-                    value={marque}
-                    onChange={(e) => setMarque(e.target.value)}
-                    placeholder="Ex : Toyota, BMW, Mercedes..."
-                    className={InputCls}
-                />
+                <input type="text" value={marque} onChange={(e) => setMarque(e.target.value)} placeholder="Ex : Toyota, BMW, Mercedes..." className={InputCls} />
             </div>
             <div>
                 <label className={LabelCls}>Modèle précis *</label>
-                <input
-                    type="text"
-                    value={modele}
-                    onChange={(e) => setModele(e.target.value)}
-                    placeholder="Ex : RAV4, Série 3, GLE..."
-                    className={InputCls}
-                />
+                <input type="text" value={modele} onChange={(e) => setModele(e.target.value)} placeholder="Ex : RAV4, Série 3, GLE..." className={InputCls} />
             </div>
             <div>
                 <label className={LabelCls}>Carburant</label>
-                <select
-                    value={carburant}
-                    onChange={(e) => setCarburant(e.target.value)}
-                    className={InputCls}
-                >
+                <select value={carburant} onChange={(e) => setCarburant(e.target.value)} className={InputCls}>
                     <option value="">Sélectionner...</option>
                     <option>Essence</option>
                     <option>Diesel</option>
@@ -170,23 +150,11 @@ const FormulaireVehicules = ({
             </div>
             <div>
                 <label className={LabelCls}>Options majeures</label>
-                <textarea
-                    value={options}
-                    onChange={(e) => setOptions(e.target.value)}
-                    rows={2}
-                    placeholder="Ex : Toit ouvrant, Cuir, GPS..."
-                    className={InputCls + ' resize-none'}
-                />
+                <textarea value={options} onChange={(e) => setOptions(e.target.value)} rows={2} placeholder="Ex : Toit ouvrant, Cuir, GPS..." className={InputCls + ' resize-none'} />
             </div>
             <div>
                 <label className={LabelCls}>Autres caractéristiques</label>
-                <textarea
-                    value={autres}
-                    onChange={(e) => setAutres(e.target.value)}
-                    rows={2}
-                    placeholder="Toute précision supplémentaire..."
-                    className={InputCls + ' resize-none'}
-                />
+                <textarea value={autres} onChange={(e) => setAutres(e.target.value)} rows={2} placeholder="Toute précision supplémentaire..." className={InputCls + ' resize-none'} />
             </div>
             <button
                 onClick={() => onSoumettre({
@@ -219,31 +187,15 @@ const FormulairePhones = ({
         <div className="space-y-3">
             <div>
                 <label className={LabelCls}>Marque *</label>
-                <input
-                    type="text"
-                    value={marque}
-                    onChange={(e) => setMarque(e.target.value)}
-                    placeholder="Ex : Apple, Samsung, Xiaomi..."
-                    className={InputCls}
-                />
+                <input type="text" value={marque} onChange={(e) => setMarque(e.target.value)} placeholder="Ex : Apple, Samsung, Xiaomi..." className={InputCls} />
             </div>
             <div>
                 <label className={LabelCls}>Modèle *</label>
-                <input
-                    type="text"
-                    value={modele}
-                    onChange={(e) => setModele(e.target.value)}
-                    placeholder="Ex : iPhone 15 Pro, S24 Ultra..."
-                    className={InputCls}
-                />
+                <input type="text" value={modele} onChange={(e) => setModele(e.target.value)} placeholder="Ex : iPhone 15 Pro, S24 Ultra..." className={InputCls} />
             </div>
             <div>
                 <label className={LabelCls}>Capacité de stockage</label>
-                <select
-                    value={stockage}
-                    onChange={(e) => setStockage(e.target.value)}
-                    className={InputCls}
-                >
+                <select value={stockage} onChange={(e) => setStockage(e.target.value)} className={InputCls}>
                     <option value="">Sélectionner...</option>
                     <option>128 Go</option>
                     <option>256 Go</option>
@@ -253,13 +205,7 @@ const FormulairePhones = ({
             </div>
             <div>
                 <label className={LabelCls}>Couleur souhaitée (facultatif)</label>
-                <input
-                    type="text"
-                    value={couleur}
-                    onChange={(e) => setCouleur(e.target.value)}
-                    placeholder="Ex : Noir, Blanc, Titane..."
-                    className={InputCls}
-                />
+                <input type="text" value={couleur} onChange={(e) => setCouleur(e.target.value)} placeholder="Ex : Noir, Blanc, Titane..." className={InputCls} />
             </div>
             <button
                 onClick={() => onSoumettre({
@@ -290,43 +236,19 @@ const FormulaireBureautique = ({
         <div className="space-y-3">
             <div>
                 <label className={LabelCls}>Type de matériel *</label>
-                <input
-                    type="text"
-                    value={type}
-                    onChange={(e) => setType(e.target.value)}
-                    placeholder="Ex : Ordinateur portable, Imprimante..."
-                    className={InputCls}
-                />
+                <input type="text" value={type} onChange={(e) => setType(e.target.value)} placeholder="Ex : Ordinateur portable, Imprimante..." className={InputCls} />
             </div>
             <div>
                 <label className={LabelCls}>Marque</label>
-                <input
-                    type="text"
-                    value={marque}
-                    onChange={(e) => setMarque(e.target.value)}
-                    placeholder="Ex : Apple, HP, Dell, Lenovo..."
-                    className={InputCls}
-                />
+                <input type="text" value={marque} onChange={(e) => setMarque(e.target.value)} placeholder="Ex : Apple, HP, Dell, Lenovo..." className={InputCls} />
             </div>
             <div>
                 <label className={LabelCls}>Modèle / Référence</label>
-                <input
-                    type="text"
-                    value={modele}
-                    onChange={(e) => setModele(e.target.value)}
-                    placeholder="Ex : MacBook Pro M3, EliteBook 840..."
-                    className={InputCls}
-                />
+                <input type="text" value={modele} onChange={(e) => setModele(e.target.value)} placeholder="Ex : MacBook Pro M3, EliteBook 840..." className={InputCls} />
             </div>
             <div>
                 <label className={LabelCls}>Spécifications techniques</label>
-                <textarea
-                    value={specs}
-                    onChange={(e) => setSpecs(e.target.value)}
-                    rows={3}
-                    placeholder="RAM, stockage, processeur, écran..."
-                    className={InputCls + ' resize-none'}
-                />
+                <textarea value={specs} onChange={(e) => setSpecs(e.target.value)} rows={3} placeholder="RAM, stockage, processeur, écran..." className={InputCls + ' resize-none'} />
             </div>
             <button
                 onClick={() => onSoumettre({
@@ -357,11 +279,7 @@ const FormulaireImmobilier = ({
         <div className="space-y-3">
             <div>
                 <label className={LabelCls}>Type de projet *</label>
-                <select
-                    value={typeProjet}
-                    onChange={(e) => setTypeProjet(e.target.value)}
-                    className={InputCls}
-                >
+                <select value={typeProjet} onChange={(e) => setTypeProjet(e.target.value)} className={InputCls}>
                     <option value="">Sélectionner...</option>
                     <option>Achat</option>
                     <option>Location</option>
@@ -373,33 +291,15 @@ const FormulaireImmobilier = ({
             </div>
             <div>
                 <label className={LabelCls}>Localisation / Quartier ciblé *</label>
-                <input
-                    type="text"
-                    value={localisation}
-                    onChange={(e) => setLocalisation(e.target.value)}
-                    placeholder="Ex : Almadies, Plateau, Mermoz..."
-                    className={InputCls}
-                />
+                <input type="text" value={localisation} onChange={(e) => setLocalisation(e.target.value)} placeholder="Ex : Almadies, Plateau, Mermoz..." className={InputCls} />
             </div>
             <div>
                 <label className={LabelCls}>Budget prévisionnel (facultatif)</label>
-                <input
-                    type="number"
-                    value={budget}
-                    onChange={(e) => setBudget(e.target.value)}
-                    placeholder="Ex : 500000 FCFA"
-                    className={InputCls}
-                />
+                <input type="number" value={budget} onChange={(e) => setBudget(e.target.value)} placeholder="Ex : 500000 FCFA" className={InputCls} />
             </div>
             <div>
                 <label className={LabelCls}>Caractéristiques spécifiques</label>
-                <textarea
-                    value={caract}
-                    onChange={(e) => setCaract(e.target.value)}
-                    rows={3}
-                    placeholder="Nbre de chambres, piscine, parking..."
-                    className={InputCls + ' resize-none'}
-                />
+                <textarea value={caract} onChange={(e) => setCaract(e.target.value)} rows={3} placeholder="Nbre de chambres, piscine, parking..." className={InputCls + ' resize-none'} />
             </div>
             <button
                 onClick={() => onSoumettre({
@@ -481,7 +381,7 @@ export const FormulaireModal = ({
             >
                 <div className="sticky top-0 bg-[#0a0a0a] px-5 pt-5 pb-3 border-b border-white/[0.06] flex items-center justify-between z-10">
                     <div>
-                        <p className="text-[10px] text-ls-green uppercase tracking-[0.15em] font-bold">
+                        <p className="text-[10px] text-ls-gold uppercase tracking-[0.15em] font-bold">
                             ✦ Formulaire de demande
                         </p>
                         <p className="text-[15px] font-black text-white mt-0.5">
