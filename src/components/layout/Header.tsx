@@ -82,6 +82,7 @@ export const Header = ({ onDemandeClick }: HeaderProps) => {
                                     ✦ Nous contacter
                                 </p>
                                 
+                                <a
                                     href={WA_HREF}
                                     target="_blank"
                                     rel="noopener noreferrer"
