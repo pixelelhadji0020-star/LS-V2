@@ -21,7 +21,7 @@ const TITRES: Record<Categorie, string> = {
     telephones:  'Téléphones',
     bureautique: 'Matériel Bureautique',
     immobilier:  'Immobilier',
-    specifique:  'Demande spécifique',
+    specifique:  'Commande Express',
 };
 
 const construireMessage = (
@@ -36,7 +36,7 @@ const construireMessage = (
         .forEach(([k, v]) => { details += '- ' + k + ' : ' + v + '\n'; });
 
     return (
-        '✨ *NOUVELLE DEMANDE — LS LA SOLUTION* ✨\n' +
+        '✨ *NOUVELLE DEMANDE — L\'AS LA SOLUTION* ✨\n' +
         '━━━━━━━━━━━━━━━━━━━━━━━\n' +
         '_Conciergerie Premium · Dakar · Sénégal_\n\n' +
         '👤 *Client :* ' + client.nom + '\n' +
@@ -105,6 +105,12 @@ const BlocClient = ({
                 className={InputCls}
             />
         </div>
+
+        {/* ── Texte de confiance ── */}
+        <p className="text-[11px] text-gray-500 leading-relaxed italic border-l-2 border-ls-gold/30 pl-3 mt-1">
+            "Déléguez votre précieux temps à notre équipe professionnelle sur toutes vos commandes.
+            Avec La Solution (L'AS), vos commandes restent prioritaires."
+        </p>
     </div>
 );
 
