@@ -79,7 +79,7 @@ export default function App() {
                     {/* Textes */}
                     <div className="relative space-y-2">
                         <p className="text-[10px] text-ls-gold uppercase tracking-[0.2em] font-bold">
-                            ✦ Conciergerie Premium · Dakar
+                            ✦ Conciergerie Premium · SENEGAL
                         </p>
                         <h1 className="text-[1.6rem] font-black tracking-tight leading-[1.15] text-white">
                             La Solution Express
