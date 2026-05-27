@@ -86,7 +86,8 @@ export default function App() {
                         </h1>
                         <p className="text-[12px] text-gray-400 leading-relaxed max-w-xs mx-auto">
                             Sourcing & acquisition premium au Sénégal.
-                            Nous trouvons et livrons ce que vous cherchez.
+                            Un clic suffit pour que votre demande soit prise en compte dans les meilleurs
+                        délais possibles <strong className="text-white">(Max 24h)</strong>. 
                         </p>
 
                         {/* Ligne décorative */}
@@ -160,8 +161,7 @@ export default function App() {
                 ══════════════════════════════════ */}
                 <div className="space-y-4 pt-2 animate-fade-in border-t border-white/[0.05]">
                     <p className="text-[13px] text-gray-400 leading-relaxed">
-                        Un clic suffit pour que votre demande soit prise en compte dans les meilleurs
-                        délais possibles <strong className="text-white">(Max 24h)</strong>.
+                       
                         Formulez une demande et la mise à disposition est effectuée.
                     </p>
                 
