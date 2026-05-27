@@ -1,4 +1,5 @@
 import { useState, useRef, KeyboardEvent } from 'react';
+import { LOGO_LAS } from '../../assets/logo';
 
 interface HeaderProps {
     onRechercheValidee: (texte: string) => void;
@@ -23,12 +24,16 @@ export const Header = ({ onRechercheValidee }: HeaderProps) => {
         <header className="sticky top-0 z-40 w-full bg-ls-black/95 backdrop-blur-xl border-b border-white/[0.06] px-4 py-3">
             <div className="max-w-md mx-auto flex items-center gap-3">
 
+                {/* Logo L'AS */}
                 <div className="flex-shrink-0">
-                    <div className="w-8 h-8 rounded-lg bg-ls-gold flex items-center justify-center shadow-lg shadow-ls-gold/20">
-                        <span className="text-ls-black font-black text-xs tracking-widest">LS</span>
-                    </div>
+                    <img
+                        src={LOGO_LAS}
+                        alt="L'AS — La Solution Express"
+                        className="w-9 h-9 rounded-lg object-cover shadow-lg shadow-ls-gold/20"
+                    />
                 </div>
 
+                {/* Barre de recherche */}
                 <div className="flex-1 flex items-center bg-[#111] border border-white/[0.08] rounded-xl px-3 gap-2 focus-within:border-ls-gold/50 transition-colors">
                     <button
                         onClick={valider}
