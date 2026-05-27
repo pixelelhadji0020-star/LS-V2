@@ -164,10 +164,7 @@ export default function App() {
                         délais possibles <strong className="text-white">(Max 24h)</strong>.
                         Formulez une demande et la mise à disposition est effectuée.
                     </p>
-                    <p className="text-[13px] text-gray-500 leading-relaxed italic border-l-2 border-ls-gold/40 pl-4">
-                        "Déléguez votre précieux temps à notre équipe professionnelle sur toutes vos commandes.
-                        Avec La Solution (L'AS), vos commandes restent prioritaires."
-                    </p>
+                
                 </div>
 
             </main>
