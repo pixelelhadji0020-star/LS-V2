@@ -162,7 +162,7 @@ export default function App() {
                 <div className="space-y-4 pt-2 animate-fade-in border-t border-white/[0.05]">
                     <p className="text-[13px] text-gray-400 leading-relaxed">
                        
-                        Formulez une demande et la mise à disposition est effectuée.
+                        Formulez une demande pour qu'une mise à la disposition soit parfaitement exécutée !
                     </p>
                 
                 </div>
