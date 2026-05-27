@@ -86,6 +86,7 @@ export default function App() {
                         </h1>
                         <p className="text-[12px] text-gray-400 leading-relaxed max-w-xs mx-auto">
                             Sourcing & acquisition premium au Sénégal.
+                            <br />
                             Un clic suffit pour que votre demande soit prise en compte dans les meilleurs
                         délais possibles <strong className="text-white">(Max 24h)</strong>. 
                         </p>
